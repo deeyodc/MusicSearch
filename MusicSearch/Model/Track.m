@@ -78,6 +78,11 @@
                             NSLog(@"Unable to get Lyrics!\n");
                         }
                     }
+                    else {
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            block(@"Not found");
+                        });
+                    }
                 }] resume];
 }
 
